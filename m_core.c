@@ -253,7 +253,7 @@ unsigned char ChangeScreen(int flag)
 	return 1;
 }
 
-M_INLINE void GetCurrentSpriteDimensions(TSHIP *i, int *cx, int *cy)
+void GetCurrentSpriteDimensions(TSHIP *i, int *cx, int *cy)
 {
 	if (i->ai_type == AI_GARAGE)
 	{
@@ -272,7 +272,7 @@ M_INLINE void GetCurrentSpriteDimensions(TSHIP *i, int *cx, int *cy)
 	}
 }
 
-M_INLINE int ShipBaseOffset()
+int ShipBaseOffset()
 {
 	int xs, ys, xb, yb;
 	GetCurrentSpriteDimensions(&Ships[0], &xs, &ys);
